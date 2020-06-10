@@ -5,6 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+
+    <script>
+        function calcularSoma() {
+            let v1 = 0;
+            let v2 = 0;
+            v1 = parseFloat(document.getElementById("valor1").value);
+            v2 = parseFloat(document.getElementById("valor2").value);
+
+            let resultSoma = v1 + v2;
+            //Exibir resultado na tela
+            //forma 1 console
+            console.log("Soma igual: " + resultSoma);
+            //forma 2 alert
+            window.alert("Soma igual: " + resultSoma);
+            //forma 3 
+            document.getElementById("resposta").innerHTML = "Soma: " + resultSoma;
+        }
+    </script>
 </head>
 
 <body>
@@ -17,7 +35,8 @@
         <label> Segundo valor: </label><br />
         <input type="text" id="valor2" /><br />
 
-        <button>Calcular</button>
+        <button onclick="calcularSoma()">Calcular</button><br />
+        <div id="resposta"></div>
     </div>
 
 </body>
