@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos de entrada</title>
+    <script>
+        function lerCampos() {
+            let nome = document.getElementById("nome").value;
+            let idade = parseInt(document.getElementById("idade").value);
+
+            console.log("Nome: " + typeof(nome));
+            console.log("Idade: " + typeof(idade));
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <label for="">Seu nome: </label>
+        <input type="text" name="nome" id="nome" /> <br />
+
+        <label for="">Idade: </label>
+        <input type="number" name="idade" id="idade" /><br />
+
+        <button type="button" onclick="lerCampos(nome, idade)">Enviar e mostrar</button>
+    </div>
+
+</body>
+
+</html>
