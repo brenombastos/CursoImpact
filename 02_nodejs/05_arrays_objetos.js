@@ -5,8 +5,9 @@ let nomes = ['Breno', 'Maria', 'Joaquim', 'Osvaldo', 'Marlene'];
 //02 - Lista de numeros
 let numeros = [2, 8, 7, 10, 15, 23];
 
-console.log(nomes);
-console.log(numeros);
+//03 - Dias da semana
+
+let dias = ['dom', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sabado']
 
 //-------------------------------
 //Definindo objetos
@@ -17,8 +18,6 @@ let endereco = {
     'num_funcioarios': 5000
 };
 
-console.log(endereco);
-
 let funcionario = {
     'nome': 'Joaquin',
     'cargo': 'Analista',
@@ -26,12 +25,17 @@ let funcionario = {
     'endereco': endereco
 };
 
-console.log(funcionario);
 
 let empresa = {
     'nome': 'Capgemini',
     'endereco': endereco,
     'colaboradores': nomes
 }
+exports.listaNomes = function () {
+    return nomes;
+}
 
-console.log(empresa)
+exports.diasSemana = dias;
+
+exports.buscarEmpresa = () => empresa;
+
