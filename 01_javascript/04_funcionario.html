@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionário</title>
+
+    <script>
+        function calcular() {
+            let funcionario = document.getElementById("nomeFuncionario").value;
+
+            let salario = parseFloat(document.getElementById("salario").value);
+
+            let imposto = (salario * (15 / 100));
+
+            let total = salario - imposto;
+
+            document.getElementById("resposta").innerHTML = "Funcionario: " + funcionario +
+                "<br/>" + "Salário: " + salario +
+                "<br/>" + "Imposto: " + imposto +
+                "<br/>" + "Total: " + total;
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <h1>Calculo de Salário</h1>
+        <label> Funcionário: </label><br />
+        <input type="text" id="nomeFuncionario" /><br />
+
+        <label> Salário: </label><br />
+        <input type="text" id="salario" /><br />
+
+        <button onclick="calcular()">Calcular</button><br />
+        <br />
+
+        <div id="resposta"></div>
+    </div>
+
+</body>
+
+</html>
