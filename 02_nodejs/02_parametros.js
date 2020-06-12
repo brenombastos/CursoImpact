@@ -13,6 +13,7 @@ function executar(operacao) {
     return operacao(2, 3);
 }
 
+
 console.log("Função executar soma: " + executarSoma(20, 35));
 console.log("Função mostrar tamanho: " + mostrarTamnho(100));
 
