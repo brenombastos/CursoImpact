@@ -3,7 +3,7 @@ document.getElementById('mostrarEndereco').addEventListener('click', function ()
 
     let url = `https://viacep.com.br/ws/${cep}/json/`;
 
-    let resposta = {}
+    let resposta = {};
 
 
     fetch(url)

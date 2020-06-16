@@ -1,0 +1,14 @@
+{
+  "name": "projeto_node",
+  "version": "1.0.0",
+  "description": "Entendendo o projeto Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Breno Bastos",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.26.0"
+  }
+}
