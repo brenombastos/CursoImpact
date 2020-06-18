@@ -7,7 +7,7 @@ module.exports = function (app) {
     var curso = Schema({
         codigo: { type: Number, required: true },
         descricao: { type: String, required: true },
-        cargaGoraria: { type: Number }
+        cargaHoraria: { type: Number }
     });
 
     return mongoose.model('cursos', curso);
