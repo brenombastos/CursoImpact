@@ -32,6 +32,19 @@ app.get('/contatos', function (request, response) {
   });
 });
 
+app.get('/contatos/:id', function (request, response) {
+  //exemplo localhost:3200/contatos/123
+  let id = request.params.id;
+
+  Contato.findById(id, function (erro, todosContatos) {
+    if (erro) {
+      response.json(erro);
+    } else {
+      response.json(todosContatos);
+    }
+  });
+});
+
 
 app.post('/contatos', function (request, response) {
   //Inserir um contato
@@ -44,12 +57,49 @@ app.post('/contatos', function (request, response) {
     'idade': idade,
     'telefone': telefone
   };
-  
+
   Contato.create(item, function (erro, contato) {
     if (erro) {
       response.json(erro);
     } else {
       response.json(contato);
+    }
+  });
+
+});
+
+app.put('/contatos/:id', function (request, response) {
+  let id = request.params.id;
+
+  Contato.findById(id, function (erro, contato) {
+    if (erro) {
+      response.json(erro);
+    } else {
+      contato.nome = request.body.nome;
+      contato.idade = request.body.idade;
+      contato.telefone = request.body.telefone;
+
+      contato.save(function (erro, contato_atual) {
+        if (erro) {
+          response.json(erro);
+        } else {
+          response.json(contato_atual);
+        }
+      });
+    }
+  });
+});
+
+app.delete('/contatos/:id', function (request, response) {
+  let id = request.params.id;
+
+  Contato.findById(id, function (erro, contato) {
+    if (erro) {
+      response.json(erro);
+    } else {
+      Contato.remove(contato, function (erro, contato) {
+        response.send('Contato removido')
+      });
     }
   });
 
