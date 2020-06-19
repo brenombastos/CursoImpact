@@ -7,10 +7,14 @@ module.exports = function (server) {
     const router = express.Router();
     server.use('/ws', router);
 
-    //todas relacionadas aos models
+    //todas urls relacionadas aos models
 
     const Produtos = require("../ws/produtos/produtosService");
 
     Produtos.register(router, '/produtos');
+
+    const Fornecedores = require("../ws/fornecedores/fornecedoresService");
+
+    Fornecedores.register(router, '/fornecedores');
     
 }

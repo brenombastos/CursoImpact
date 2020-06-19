@@ -1,0 +1,17 @@
+h2 {
+    font-family: cursive;
+    font-style: italic;
+}
+
+.borda {
+    padding: 10px;
+    border: 2px solid black;
+    background-color: pink;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+    color: darkblue;
+}
+.lista {
+    display: inline;
+    list-style: none;
+}
