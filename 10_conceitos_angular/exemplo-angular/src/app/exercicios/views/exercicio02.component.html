@@ -1,0 +1,27 @@
+<hr />
+<h2>Exercicio 02 - Binding unidirecional:
+</h2>
+<!-- mostra todas as pessoas independente de ter algo digitado na caixa de texto -->
+<select #lista (change)="filtrarProduto(lista.value)">
+    <option value="">TODOS</option>
+    <option *ngFor="let c of categorias" value="{{c.categoria}}"> {{c.descricao}}</option>
+</select>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Categoria</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of produtos">
+            <td>{{p.codigo}}</td>
+            <td>{{p.categoria}}</td>
+            <td>{{p.descricao}}</td>
+            <td>{{p.preco}}</td>
+        </tr>
+    </tbody>
+</table>

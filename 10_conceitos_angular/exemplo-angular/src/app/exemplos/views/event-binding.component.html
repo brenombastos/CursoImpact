@@ -1,0 +1,21 @@
+<hr />
+<h2>Exemplo 04 - Binding unidirecional:
+    (Event Binding / Property Binding)
+</h2>
+<input type="text" id="" placeholder="Informe um nome" [value]="item" (keyup)="filtrar($event)" /><br>
+<button (click)="mostrarTodos()">Mostrar Todos</button>
+<!-- mostra todas as pessoas independente de ter algo digitado na caixa de texto -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of pessoas">
+            <td>{{p.nome}}</td>
+            <td>{{p.idade}}</td>
+        </tr>
+    </tbody>
+</table>

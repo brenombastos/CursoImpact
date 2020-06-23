@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Pessoa } from './classes/pessoa.classe';
+import { Produto } from './classes/produto.classe';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,10 +10,4 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   empresa = 'Capgemini';
-
-  //exemplo 03- binding unidirecional (componente -> view)
-
-  rnd: number = Math.random();
-
-  
 }

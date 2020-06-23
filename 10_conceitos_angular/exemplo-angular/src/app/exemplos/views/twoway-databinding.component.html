@@ -1,0 +1,11 @@
+<h3>Exemplo 05 - Binding bidirecional </h3>
+
+<span>Informe o salário: </span>
+<input type="text" [(ngModel)]="salario.valor">
+<br />
+
+<!-- <span>Valor do imposto {{salario.calcular()}}</span> -->
+
+<button (click)="efetuarCalculo()">Calcular imposto</button><br>
+
+<span>Valor do imposto: {{imposto}}</span>
