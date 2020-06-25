@@ -1,0 +1,24 @@
+<h1 class="text-center">Lista de Fornecedores</h1>
+<table class="table table-striped table-hover">
+    <br />
+    <!-- <div class="col-md-6">
+            <label for="" class="form-control">Informe a descrição do produtos</label>
+            <input type="text" #busca (keyup)="0" class="form-control">
+        </div> -->
+    <thead>
+        <tr>
+            <th scope="col">CNPJ</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of fornecedores">
+            <td scope="row">{{item.cnpj}}</td>
+            <td scope="row"> {{item.nome}} </td>
+            <td scope="row"> {{item.email}} </td>
+            <td scope="row"> {{item.dataCadastro| date:'yyyy-MM-dd'}} </td>
+        </tr>
+    </tbody>
+</table>

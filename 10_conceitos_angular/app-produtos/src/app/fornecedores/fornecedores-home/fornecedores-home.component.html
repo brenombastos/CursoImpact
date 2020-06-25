@@ -1,0 +1,13 @@
+<div class="container margem">
+    <h1 class="text-center">Gestão de Fornecedores </h1>
+    <br />
+    <div class="row">
+        <button type="button" [routerLink]="['/fornecedores/novo']" (click)="novoFornecedor()" class="btn btn-info">
+            Novo Fornecedor
+        </button>
+
+
+        <app-fornecedores-lista></app-fornecedores-lista>
+    </div>
+
+</div>

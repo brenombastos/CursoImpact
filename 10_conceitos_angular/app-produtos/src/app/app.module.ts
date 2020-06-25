@@ -13,6 +13,9 @@ import { ProdutosComponent } from './produtos/produtos/produtos.component';
 import { NotFoundComponent } from './erros/not-found/not-found.component';
 import { SubListaPipe } from './filtros/sub-lista.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { FornecedoresHomeComponent } from './fornecedores/fornecedores-home/fornecedores-home.component';
+import { FornecedoresListaComponent } from './fornecedores/fornecedores-lista/fornecedores-lista.component';
+import { FornecedoresNovoComponent } from './fornecedores/fornecedores-novo/fornecedores-novo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     ProdutosComponent,
     NotFoundComponent,
-    SubListaPipe
+    SubListaPipe,
+    FornecedoresHomeComponent,
+    FornecedoresListaComponent,
+    FornecedoresNovoComponent
   ],
   imports: [
     BrowserModule,

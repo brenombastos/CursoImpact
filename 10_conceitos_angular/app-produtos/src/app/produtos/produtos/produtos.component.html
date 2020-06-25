@@ -68,9 +68,20 @@
 
                 </div>
                 <div class="form-group">
+                    <!-- Para incluir um novo produto -->
                     <button type="button" (click)="incluir(produtoSlecionado)" class="btn btn-info">
                         <span class="glyphicon glyphicon-pencil"> </span>
                         Incluir
+                    </button>
+                    <!-- Para alterar um produto -->
+                    <button type="button" (click)="alterar(produtoSlecionado)" class="btn btn-warning">
+                        <span class="glyphicon glyphicon-edit"> </span>
+                        Alterar
+                    </button>
+                    
+                    <button type="button" (click)="remover(produtoSlecionado)" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash"> </span>
+                        Remover
                     </button>
                 </div>
             </div>

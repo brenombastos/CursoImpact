@@ -19,7 +19,14 @@ export class ProdutoService {
     return this.http.post<Produto>(this.url, produto);
   }
 
-
+  public putProdutosWS(produto: Produto): Observable<Produto> {
+    const putURL = `${this.url}/${produto._id}`
+    return this.http.put<Produto>(putURL, produto);
+  }
+  public deleteProdutosWS(id: string): Observable<Produto> {
+    const deleteURL = `${this.url}/${id}`;
+    return this.http.delete<Produto>(deleteURL);
+  }
 
 
   public getListaProdutos(): Produto[] {

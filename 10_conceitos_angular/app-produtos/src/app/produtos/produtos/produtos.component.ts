@@ -43,8 +43,9 @@ export class ProdutosComponent implements OnInit {
   public novo() {
     this.novoProduto = { codigo: 0, descricao: '', unidade: '', preco: 0, categoria: '' }
     this.produtoSlecionado = this.novoProduto;
+    console.log(this.novoProduto);
   }
-  public incluir(produto: Produto) {
+  public incluir(produto: Produto): void {
     //this.produtos.push(produto);
     this.service.postProdutosWS(produto)
       .subscribe(
@@ -58,21 +59,34 @@ export class ProdutosComponent implements OnInit {
       );
   }
 
-  // p1: Produto = new Produto();
-  // p2: Produto = new Produto();
+  public alterar(produto: Produto): void {
+    this.service.putProdutosWS(produto)
+      .subscribe(
+        res => JSON.stringify(res),
+        error => alert(error),
+        () => {
+          this.listar();
+          alert('Produto alterado com sucesso!');
+        }
+      );
+  }
 
+  public remover(produto: Produto): void {
+    if (window.confirm('Tem certeza que deseja remover?')) {
 
-  // // o objeto só p1 pode ser acessado dentro de uma função
-  // public listarProdutos() {
-
-  //   this.p1.setDados(10, 'Tablet', 'pc', 500.0, 'INFORMATICA')
-  //   this.p1.setDados(20, 'Camisa', 'pc', 50.0, 'VESTUARIO')
-
-  //   this.produtos.push(this.p1);
-  //   this.produtos.push(this.p2);
-  // }
-
-  //definindo uma lista de produtos com o formato de objeto JSON
-
+      console.log(produto);
+      
+      this.service.deleteProdutosWS(produto._id)
+        .subscribe(
+          res => JSON.stringify(res),
+          error => alert(error),
+          () => {
+            this.listar();
+            this.novo;
+            alert("Produto removido com sucesso!");
+          }
+        )
+    }
+  }
 
 }

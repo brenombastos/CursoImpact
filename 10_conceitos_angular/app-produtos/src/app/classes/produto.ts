@@ -8,8 +8,9 @@ export class Produto {
     //     this.descricao = descricao; //propriedade set descrição
     // }
 
+    public _id?: string; // representa o id do produto no banco de dados
+    
     //Propriedades : getters / setters
-
     //Propriedade codigo
     private _codigo?: number;
     public get codigo(): number {
