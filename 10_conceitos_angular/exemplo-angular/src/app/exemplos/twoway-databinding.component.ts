@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: "two-way",
-    templateUrl: "views/twoway-databinding.component.html"
+    templateUrl: "views/twoway-databinding.html"
 })
 
 export class TwoWayDatabindingComponent {
