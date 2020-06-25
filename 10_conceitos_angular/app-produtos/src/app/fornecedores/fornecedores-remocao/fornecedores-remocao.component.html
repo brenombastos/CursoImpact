@@ -1,0 +1,25 @@
+<div class="container margem">
+    <h1 class="text-center">Confirmação de remoção</h1>
+    <form class="form-horizontal">
+        <h2 class="text-danger"> Tem certeza que deseja remover este fornecedor? </h2>
+
+        <h2>{{fornecedor.nome}}</h2>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="button" (click)="remover(fornecedor)" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-trash"> </span>
+                    Remover
+                </button>
+
+                <button type="button" (click)="cancelar()" class="btn btn-default">
+                    <span class="glyphicon glyphicon-arrow-left"> </span>
+                    Cancelar
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+
+</div>

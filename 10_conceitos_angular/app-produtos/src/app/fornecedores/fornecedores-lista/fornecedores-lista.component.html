@@ -11,6 +11,7 @@
             <th scope="col">Nome</th>
             <th scope="col">Email</th>
             <th scope="col">Data</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -19,6 +20,14 @@
             <td scope="row"> {{item.nome}} </td>
             <td scope="row"> {{item.email}} </td>
             <td scope="row"> {{item.dataCadastro| date:'yyyy-MM-dd'}} </td>
+            <td>
+                <a routerLink="/fornecedores/alterar/{{item._id}}" class="btn btn-default">
+                    <i class="glyphicon glyphicon-edit "></i>
+                </a>
+                <a routerLink="/fornecedores/remover/{{item._id}}" class="btn btn-danger">
+                    <i class="glyphicon glyphicon-trash "></i>
+                </a>
+            </td>
         </tr>
     </tbody>
 </table>

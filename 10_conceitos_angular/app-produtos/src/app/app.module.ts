@@ -16,6 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FornecedoresHomeComponent } from './fornecedores/fornecedores-home/fornecedores-home.component';
 import { FornecedoresListaComponent } from './fornecedores/fornecedores-lista/fornecedores-lista.component';
 import { FornecedoresNovoComponent } from './fornecedores/fornecedores-novo/fornecedores-novo.component';
+import { FornecedoresAlteracaoComponent } from './fornecedores/fornecedores-alteracao/fornecedores-alteracao.component';
+import { FornecedoresRemocaoComponent } from './fornecedores/fornecedores-remocao/fornecedores-remocao.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FornecedoresNovoComponent } from './fornecedores/fornecedores-novo/forn
     SubListaPipe,
     FornecedoresHomeComponent,
     FornecedoresListaComponent,
-    FornecedoresNovoComponent
+    FornecedoresNovoComponent,
+    FornecedoresAlteracaoComponent,
+    FornecedoresRemocaoComponent
   ],
   imports: [
     BrowserModule,
