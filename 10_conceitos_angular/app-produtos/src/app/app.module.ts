@@ -21,6 +21,7 @@ import { FornecedoresRemocaoComponent } from './fornecedores/fornecedores-remoca
 import { NgElseDirective } from './diretivas/ng-else.directive';
 import { NgLoopDirective } from './diretivas/ng-loop.directive';
 import { NgFundoDirective } from './diretivas/ng-fundo.directive';
+import { FooterComponent } from './modelos/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { NgFundoDirective } from './diretivas/ng-fundo.directive';
     FornecedoresRemocaoComponent,
     NgElseDirective,
     NgLoopDirective,
-    NgFundoDirective
+    NgFundoDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
