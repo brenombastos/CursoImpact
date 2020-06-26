@@ -14,7 +14,7 @@ export class ProdutosComponent implements OnInit {
   }
 
   criarProduto() {
-
+    this.router.navigate(['/produtos/novo']);
   }
 
 }

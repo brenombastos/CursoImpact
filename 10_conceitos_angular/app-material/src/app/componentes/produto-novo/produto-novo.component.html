@@ -1,1 +1,38 @@
-<p>produto-novo works!</p>
+<mat-card class="mat-elevation-z3">
+    <mat-card-title>Novo Produto</mat-card-title>
+
+    <form action="">
+        <mat-form-field>
+            <mat-label>Codigo</mat-label>
+            <input matInput [(ngModel)]="produto.codigo" name="codigo">
+        </mat-form-field><br />
+
+        <mat-form-field>
+            <mat-label>Descrição</mat-label>
+            <input matInput [(ngModel)]="produto.descricao" name="descricao">
+        </mat-form-field><br />
+
+        <mat-form-field>
+            <mat-label>Unidade</mat-label>
+            <input matInput [(ngModel)]="produto.unidade" name="unidade">
+        </mat-form-field><br />
+
+        <mat-form-field>
+            <mat-label>Preço</mat-label>
+            <input matInput [(ngModel)]="produto.preco" name="preco">
+        </mat-form-field><br />
+
+        <mat-form-field>
+            <mat-label>Categoria</mat-label>
+            <mat-select [(ngModel)]="produto.categoria" name="categoria">
+                <mat-option>INFORMATICA</mat-option>
+                <mat-option>VESTUARIO</mat-option>
+                <mat-option>ALIMENTACAO</mat-option>
+            </mat-select>
+        </mat-form-field> <br />
+    </form>
+
+    <button mat-raised-button color="primary">
+        Incluir Produto
+    </button>
+</mat-card>
