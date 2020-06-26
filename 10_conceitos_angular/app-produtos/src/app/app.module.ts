@@ -18,6 +18,9 @@ import { FornecedoresListaComponent } from './fornecedores/fornecedores-lista/fo
 import { FornecedoresNovoComponent } from './fornecedores/fornecedores-novo/fornecedores-novo.component';
 import { FornecedoresAlteracaoComponent } from './fornecedores/fornecedores-alteracao/fornecedores-alteracao.component';
 import { FornecedoresRemocaoComponent } from './fornecedores/fornecedores-remocao/fornecedores-remocao.component';
+import { NgElseDirective } from './diretivas/ng-else.directive';
+import { NgLoopDirective } from './diretivas/ng-loop.directive';
+import { NgFundoDirective } from './diretivas/ng-fundo.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { FornecedoresRemocaoComponent } from './fornecedores/fornecedores-remoca
     FornecedoresListaComponent,
     FornecedoresNovoComponent,
     FornecedoresAlteracaoComponent,
-    FornecedoresRemocaoComponent
+    FornecedoresRemocaoComponent,
+    NgElseDirective,
+    NgLoopDirective,
+    NgFundoDirective
   ],
   imports: [
     BrowserModule,
