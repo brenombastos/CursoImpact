@@ -20,6 +20,7 @@ import { FormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
+import { MatTableModule } from "@angular/material/table";
 //Fim Fomulário
 
 import { FooterComponent } from './modelos/footer/footer.component';
@@ -27,6 +28,7 @@ import { NavbarComponent } from './modelos/navbar/navbar.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { ProdutosComponent } from './componentes/produtos/produtos.component';
 import { ProdutoNovoComponent } from './componentes/produto-novo/produto-novo.component';
+import { ProdutoListaComponent } from './componentes/produto-lista/produto-lista.component';
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import { ProdutoNovoComponent } from './componentes/produto-novo/produto-novo.co
     HomeComponent,
     ProdutosComponent,
     ProdutoNovoComponent,
+    ProdutoListaComponent,
 
   ],
   imports: [
@@ -46,7 +49,7 @@ import { ProdutoNovoComponent } from './componentes/produto-novo/produto-novo.co
     BrowserAnimationsModule,
 
     MatToolbarModule, MatSidenavModule, MatListModule, MatCardModule, MatButtonModule, HttpClientModule, MatSnackBarModule,
-    FormsModule, MatFormFieldModule, MatInputModule, MatSelectModule
+    FormsModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

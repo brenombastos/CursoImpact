@@ -9,11 +9,10 @@ import { Produto } from 'src/app/classes/produto';
   styleUrls: ['./produto-novo.component.css']
 })
 export class ProdutoNovoComponent implements OnInit {
-  constructor(
-    private service: ProdutosService,
-    private router: Router) { }
-  public produto: Produto;
 
+  constructor(private service: ProdutosService, private router: Router) { }
+
+  public produto: Produto;
   ngOnInit(): void {
     this.produto = {
       codigo: 0,
@@ -23,6 +22,7 @@ export class ProdutoNovoComponent implements OnInit {
       preco: 0
     }
   }
+  categorias: string[] = ['INFORMATICA', 'VESTUARIO', 'ALIMENTACAO', 'HIGIENE', 'CONSTRUCAO'];
 
   incluirProduto(): void {
     this.service.postProdutosWS(this.produto)
